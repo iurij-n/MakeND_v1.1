@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>MakeND - Создание пакета НД-90</title>
+        <script src="eel.js"></script>
+        <script src="jquery-3.6.0.min.js" ></script>
+
+        <link rel="icon" type="image/ico" href="favicon.ico">
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+
+    <body class="body">
+
+        <div align="center" class="content">
+            <div id="logo_id" class="logo">
+                <img src="logo.png" alt="icon">
+            </div>
+            <div id="myDiv"></div>
+            <div id="dsp_id" class="data">
+                <div class="form_radio_btn">
+                    <input id="radio-1" type="radio" name="dsp_radio" value="1" checked>
+                    <label for="radio-1">ДСП-1</label>
+                </div>
+                
+                <div class="form_radio_btn">
+                    <input id="radio-2" type="radio" name="dsp_radio" value="2">
+                    <label for="radio-2">ДСП-2</label>
+                </div>
+                
+                <div class="form_radio_btn">
+                    <input id="radio-3" type="radio" name="dsp_radio" value="3">
+                    <label for="radio-3">ДСП-3</label>
+                </div>
+                
+                <div class="form_radio_btn">
+                    <input id="radio-4" type="radio" name="dsp_radio" value="4">
+                    <label for="radio-4">ДСП-4</label>
+                </div>
+            </div>
+
+            <div id="date_id" class="date">
+                <form>
+                        <label for="date">Дата ремонта: </label>
+                        <input type="date" id="date_input" name="date"/>
+                </form>
+            </div>
+
+            <h3>Допускающий к работе</h3>
+            <div class="form_card">
+                <form action="formdata" method="post" name="admitting_list_form" class="form" id="admitting_list_form"></form>
+            </div>
+            
+            <h3>Выдающий норяд-допуск</h3>
+            <div class="form_card">
+                <form action="formdata" method="post" name="issuing_list_form" class="form" id="issuing_list_form"></form>
+            </div>
+            
+            <h3>Согласующий норяд-допуск</h3>
+            <div class="form_card">
+                <form action="formdata" method="post" name="approving_list_form" class="form" id="approving_list_form"></form>
+            </div>
+            <button id="make_nd" type="button" onclick="make_nd()" class="button">Создать пакет НД</button>
+            <p id="progress_bar" class="progress_bar"></p>
+            <script src="process.js" ></script>
+            <script src="forms.js" ></script>
+            <script src="get_data.js" ></script>
+            <div class="footer">
+                <!-- <p class="copyright">Novikov Yurij &copy; 2022</p> -->
+            </div>
+        </div>
+
+    </body>
+</html>

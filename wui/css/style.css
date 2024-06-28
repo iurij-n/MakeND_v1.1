@@ -1,0 +1,142 @@
+.form_radio_btn {
+	display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.form_radio_btn input[type=radio] {
+	display: none;
+}
+.form_radio_btn label {
+	display: inline-block;
+	cursor: pointer;
+	padding: 0px 15px;
+	line-height: 34px;
+	border: 1px solid #999;
+	border-radius: 6px;
+	user-select: none;
+}
+ 
+/* Checked */
+.form_radio_btn input[type=radio]:checked + label {
+	background: #ffe0a6;
+}
+ 
+/* Hover */
+.form_radio_btn label:hover {
+	color: #666;
+}
+ 
+/* Disabled */
+.form_radio_btn input[type=radio]:disabled + label {
+	background: #efefef;
+	color: #666;
+}
+
+.button {
+	align-items: center;
+	appearance: none;
+	background-color: #FCFCFD;
+	border-radius: 4px;
+	border-width: 0;
+	box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+	box-sizing: border-box;
+	color: #36395A;
+	cursor: pointer;
+	display: inline-flex;
+	font-family: "JetBrains Mono",monospace;
+	height: 48px;
+	width: 380px;
+	justify-content: center;
+	line-height: 1;
+	list-style: none;
+	overflow: hidden;
+	padding-left: 16px;
+	padding-right: 16px;
+	position: relative;
+	text-align: left;
+	text-decoration: none;
+	transition: box-shadow .15s,transform .15s;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	white-space: nowrap;
+	will-change: box-shadow,transform;
+	font-size: 18px;
+	margin-top: 50px;
+  }
+  
+  .button:focus {
+	box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  }
+  
+  .button:hover {
+	box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+	transform: translateY(-2px);
+  }
+  
+  .button:active {
+	box-shadow: #D6D6E7 0 3px 7px inset;
+	transform: translateY(2px);
+  }
+
+  .logo {
+	margin-bottom: 20px;
+  }
+
+  .date {
+	margin-top: 25px;
+  }
+
+  .body {
+	font-family: Inter, Arial, sans-serif;
+	font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.26px;
+	color: #0e0e0f;
+  }
+  h3 {
+	font-weight: 800;
+    font-size: 23px;
+    line-height: 32px;
+    letter-spacing: -0.44px;
+  }
+
+  .data {
+	margin-bottom: 35px;
+  }
+
+  .form {
+	margin-bottom: 30px;
+  }
+
+  p, label, input {
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+select {
+    font-size: 19px;
+    line-height: 1.8;
+	width: 380px;
+}
+
+.copyright {
+	align-items: center;
+	font-size: 9px;
+}
+
+.footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 30px;
+}
+
+.form_card {
+	height: 20px;
+}
+
+.progress_bar {
+	margin-top: 25px;
+}
