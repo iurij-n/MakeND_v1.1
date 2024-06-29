@@ -5,7 +5,7 @@ import time
 import eel
 from docxtpl import DocxTemplate
 
-from create_db import ExcelToDB
+from create_db import CSVToDB
 from models import Person
 
 # Чтение значений констант из settings.ini
@@ -31,7 +31,7 @@ SKIP_ADMITTING_VALUE = ''
 SKIP_ISSUING_VALUE = ' ' * 60
 SKIP_APPROVING_VALUE = ' ' * 100
 
-db_inst = ExcelToDB(ENGINEERS_LIST_FILENAME, DB_FILENAME, Person)
+db_inst = CSVToDB(ENGINEERS_LIST_FILENAME, DB_FILENAME, Person)
 
 
 def get_templates_list() -> list:
@@ -198,7 +198,7 @@ def main():
                        approving_value_list)
     try:
         eel.start('ui.html',
-                  mode='chrome',
+                  mode='default',
                   size=(500, 850),
                   position=(100, 200))
     except Exception:
