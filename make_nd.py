@@ -155,11 +155,10 @@ def make_documents(templates_list: list, context: dict) -> None:
 
     save_folder = get_save_folder_name(context['Дата'], context['ДСП'])
     os.mkdir(save_folder)
-    os.startfile(f'{os.getcwd()}\\{save_folder}')
     print('\nСоздание НД\n')
     templates_count = len(templates_list)
     for number, template in enumerate(templates_list):
-        document = DocxTemplate('templates/'+template)
+        document = DocxTemplate(os.path.abspath('templates/'+template))
         document.render(context)
         document.save(save_folder+template)
         print(f'{number+1}/{templates_count} {template} - сохранен')
