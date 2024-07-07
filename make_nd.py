@@ -1,5 +1,7 @@
 import configparser
 import os
+import subprocess
+import sys
 import time
 
 import eel
@@ -156,7 +158,8 @@ def make_documents(templates_list: list, context: dict) -> None:
     save_folder = get_save_folder_name(context['Дата'], context['ДСП'])
     os.mkdir(save_folder)
     save_folder_path = os.path.join(os.getcwd(), save_folder)
-    os.startfile(save_folder_path)
+    opener = "open" if sys.platform == "darwin" else "xdg-open"
+    subprocess.call([opener, save_folder_path])
     print('\nСоздание НД\n')
     templates_count = len(templates_list)
     for number, template in enumerate(templates_list):
